@@ -5,7 +5,6 @@
     margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    box-sizing: border-box;
 }
 
 :root{
@@ -14,7 +13,7 @@
     --cor3: #21262D;
     --cor4: #CCE201;
     --cor5: #FFFFFF;
-    --cor6: #414a57;
+    --cor7: #e5ff00;
 }
 
 html, body {
@@ -40,6 +39,9 @@ header > h1{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 4em;
+    letter-spacing: 2px;
+    transition: font-size .5s;
+    transition-timing-function: ease;
 }
 
 header > nav{
@@ -54,17 +56,17 @@ header > nav > a{
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: var(--cor3);
 }
 
 header > nav > a:hover{
-    background-color: var(--cor6);
+    background-color: var(--cor3);
     border-radius: 5px;
 }
 
 header > nav > a#a1{
-    background-color: #CCE201;
+    background-color: var(--cor4);
     color: black;
+    pointer-events: none;
 }
 
 main > section > h1{
@@ -87,27 +89,28 @@ article > div{
     flex-direction: column;
     background-color: var(--cor3);
     width: 80%;
-    height: 35vh;
+    height: 400px;
     padding: 25px;
     font-size: 1em;
     border-radius: 7px;
+    transition: height .5s, width .5s;
+    box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, 0.46);
 }
 
 article > div > div.div1{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    height: 70%;
+    height: 280px;
 }
 
 article > div > div.div1 > h2{
     margin-bottom: 3px;
     font-size: 1.6em;
+    letter-spacing: 2px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid var(--cor4);
 }
-
-/* article > div > div.div1 > hr{
-    color: var(--cor4);
-}  */
 
 article > div > div.div1 > p {
     margin-top: 5px;
@@ -120,10 +123,15 @@ article > div > div.div1 > p > strong {
 
 article > div > div.div1 > ul > li{
     list-style-position: inside;
+    line-height: 1.6;
+}
+
+article > div > div.div1 > ul > li::marker{
+    color: var(--cor4);
 }
 
 article > div > div.div2{
-    height: 30%;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -134,18 +142,21 @@ article > div > div.div2 > a{
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    background-color: #CCE201;
+    background-color: var(--cor4);
     color: black;
     text-decoration: none;
     font-weight: bolder;
 }
 
+article > div > div.div2 > a:hover{
+    background-color: var(--cor7);
+}
+
 footer{
-    padding-top: 60px;
+    margin-top: 60px;
     height: 20px;
 }
 
 footer > p{
     text-align: center;
-
 }
